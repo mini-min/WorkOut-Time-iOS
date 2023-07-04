@@ -18,24 +18,16 @@
 		394DF7882A53D55A0064424B /* CustomTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394DF7872A53D55A0064424B /* CustomTabBar.storyboard */; };
 		394DF78A2A53D5850064424B /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF7892A53D5850064424B /* CustomTabBarController.swift */; };
 		394DF78C2A53D6060064424B /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF78B2A53D6060064424B /* CGPoint+Distance.swift */; };
+		394DF78E2A53D8940064424B /* StopWatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394DF78D2A53D8940064424B /* StopWatch.storyboard */; };
+		394DF7902A53D89E0064424B /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394DF78F2A53D89E0064424B /* Timer.storyboard */; };
+		394DF7922A53D8AE0064424B /* Tabata.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394DF7912A53D8AE0064424B /* Tabata.storyboard */; };
+		394DF7942A53DCEA0064424B /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF7932A53DCEA0064424B /* StopWatchViewController.swift */; };
+		394DF7962A53DCF40064424B /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF7952A53DCF40064424B /* TimerViewController.swift */; };
+		394DF7982A53DCFC0064424B /* TabataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF7972A53DCFC0064424B /* TabataViewController.swift */; };
+		394DF79B2A53E57C0064424B /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF79A2A53E57C0064424B /* Const.swift */; };
+		394DF79D2A53E58E0064424B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF79C2A53E58E0064424B /* ViewController.swift */; };
+		394DF79F2A53E5980064424B /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF79E2A53E5980064424B /* Storyboard.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		394DF75B2A53CF830064424B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 394DF73C2A53CF810064424B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 394DF7432A53CF810064424B;
-			remoteInfo = "WorkOut-Time-iOS";
-		};
-		394DF7652A53CF830064424B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 394DF73C2A53CF810064424B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 394DF7432A53CF810064424B;
-			remoteInfo = "WorkOut-Time-iOS";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		394DF7442A53CF810064424B /* WorkOut-Time-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorkOut-Time-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,8 +36,6 @@
 		394DF7502A53CF830064424B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		394DF7532A53CF830064424B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		394DF7552A53CF830064424B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		394DF75A2A53CF830064424B /* WorkOut-Time-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WorkOut-Time-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		394DF7642A53CF830064424B /* WorkOut-Time-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WorkOut-Time-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		394DF7782A53D2F60064424B /* CustomTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarButton.swift; sourceTree = "<group>"; };
 		394DF77A2A53D3050064424B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		394DF77C2A53D3160064424B /* CustomTabIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabIndicatorView.swift; sourceTree = "<group>"; };
@@ -53,24 +43,19 @@
 		394DF7872A53D55A0064424B /* CustomTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabBar.storyboard; sourceTree = "<group>"; };
 		394DF7892A53D5850064424B /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		394DF78B2A53D6060064424B /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
+		394DF78D2A53D8940064424B /* StopWatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StopWatch.storyboard; sourceTree = "<group>"; };
+		394DF78F2A53D89E0064424B /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
+		394DF7912A53D8AE0064424B /* Tabata.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabata.storyboard; sourceTree = "<group>"; };
+		394DF7932A53DCEA0064424B /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
+		394DF7952A53DCF40064424B /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		394DF7972A53DCFC0064424B /* TabataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabataViewController.swift; sourceTree = "<group>"; };
+		394DF79A2A53E57C0064424B /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		394DF79C2A53E58E0064424B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		394DF79E2A53E5980064424B /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		394DF7412A53CF810064424B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		394DF7572A53CF830064424B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		394DF7612A53CF830064424B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,8 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				394DF7442A53CF810064424B /* WorkOut-Time-iOS.app */,
-				394DF75A2A53CF830064424B /* WorkOut-Time-iOSTests.xctest */,
-				394DF7642A53CF830064424B /* WorkOut-Time-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				394DF7862A53D4780064424B /* Assets */,
+				394DF7992A53E5670064424B /* Constants */,
 				394DF7842A53D4460064424B /* Storyboards */,
 				394DF77E2A53D3710064424B /* Extensions */,
 			);
@@ -161,6 +145,9 @@
 			children = (
 				394DF7522A53CF830064424B /* LaunchScreen.storyboard */,
 				394DF7872A53D55A0064424B /* CustomTabBar.storyboard */,
+				394DF78D2A53D8940064424B /* StopWatch.storyboard */,
+				394DF78F2A53D89E0064424B /* Timer.storyboard */,
+				394DF7912A53D8AE0064424B /* Tabata.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -169,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				394DF7892A53D5850064424B /* CustomTabBarController.swift */,
+				394DF7932A53DCEA0064424B /* StopWatchViewController.swift */,
+				394DF7952A53DCF40064424B /* TimerViewController.swift */,
+				394DF7972A53DCFC0064424B /* TabataViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,6 +169,16 @@
 				394DF7502A53CF830064424B /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		394DF7992A53E5670064424B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				394DF79A2A53E57C0064424B /* Const.swift */,
+				394DF79C2A53E58E0064424B /* ViewController.swift */,
+				394DF79E2A53E5980064424B /* Storyboard.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,42 +201,6 @@
 			productReference = 394DF7442A53CF810064424B /* WorkOut-Time-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		394DF7592A53CF830064424B /* WorkOut-Time-iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 394DF7712A53CF830064424B /* Build configuration list for PBXNativeTarget "WorkOut-Time-iOSTests" */;
-			buildPhases = (
-				394DF7562A53CF830064424B /* Sources */,
-				394DF7572A53CF830064424B /* Frameworks */,
-				394DF7582A53CF830064424B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				394DF75C2A53CF830064424B /* PBXTargetDependency */,
-			);
-			name = "WorkOut-Time-iOSTests";
-			productName = "WorkOut-Time-iOSTests";
-			productReference = 394DF75A2A53CF830064424B /* WorkOut-Time-iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		394DF7632A53CF830064424B /* WorkOut-Time-iOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 394DF7742A53CF830064424B /* Build configuration list for PBXNativeTarget "WorkOut-Time-iOSUITests" */;
-			buildPhases = (
-				394DF7602A53CF830064424B /* Sources */,
-				394DF7612A53CF830064424B /* Frameworks */,
-				394DF7622A53CF830064424B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				394DF7662A53CF830064424B /* PBXTargetDependency */,
-			);
-			name = "WorkOut-Time-iOSUITests";
-			productName = "WorkOut-Time-iOSUITests";
-			productReference = 394DF7642A53CF830064424B /* WorkOut-Time-iOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,14 +213,6 @@
 				TargetAttributes = {
 					394DF7432A53CF810064424B = {
 						CreatedOnToolsVersion = 14.3.1;
-					};
-					394DF7592A53CF830064424B = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 394DF7432A53CF810064424B;
-					};
-					394DF7632A53CF830064424B = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 394DF7432A53CF810064424B;
 					};
 				};
 			};
@@ -274,8 +230,6 @@
 			projectRoot = "";
 			targets = (
 				394DF7432A53CF810064424B /* WorkOut-Time-iOS */,
-				394DF7592A53CF830064424B /* WorkOut-Time-iOSTests */,
-				394DF7632A53CF830064424B /* WorkOut-Time-iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,23 +239,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				394DF7902A53D89E0064424B /* Timer.storyboard in Resources */,
+				394DF78E2A53D8940064424B /* StopWatch.storyboard in Resources */,
 				394DF7542A53CF830064424B /* LaunchScreen.storyboard in Resources */,
+				394DF7922A53D8AE0064424B /* Tabata.storyboard in Resources */,
 				394DF7882A53D55A0064424B /* CustomTabBar.storyboard in Resources */,
 				394DF7512A53CF830064424B /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		394DF7582A53CF830064424B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		394DF7622A53CF830064424B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,45 +255,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				394DF7962A53DCF40064424B /* TimerViewController.swift in Sources */,
 				394DF7802A53D3910064424B /* UIView+Extension.swift in Sources */,
 				394DF77B2A53D3050064424B /* CustomTabBar.swift in Sources */,
 				394DF7482A53CF810064424B /* AppDelegate.swift in Sources */,
+				394DF7982A53DCFC0064424B /* TabataViewController.swift in Sources */,
+				394DF79B2A53E57C0064424B /* Const.swift in Sources */,
 				394DF78C2A53D6060064424B /* CGPoint+Distance.swift in Sources */,
+				394DF7942A53DCEA0064424B /* StopWatchViewController.swift in Sources */,
+				394DF79D2A53E58E0064424B /* ViewController.swift in Sources */,
 				394DF7792A53D2F60064424B /* CustomTabBarButton.swift in Sources */,
+				394DF79F2A53E5980064424B /* Storyboard.swift in Sources */,
 				394DF78A2A53D5850064424B /* CustomTabBarController.swift in Sources */,
 				394DF74A2A53CF810064424B /* SceneDelegate.swift in Sources */,
 				394DF77D2A53D3160064424B /* CustomTabIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		394DF7562A53CF830064424B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		394DF7602A53CF830064424B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		394DF75C2A53CF830064424B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 394DF7432A53CF810064424B /* WorkOut-Time-iOS */;
-			targetProxy = 394DF75B2A53CF830064424B /* PBXContainerItemProxy */;
-		};
-		394DF7662A53CF830064424B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 394DF7432A53CF810064424B /* WorkOut-Time-iOS */;
-			targetProxy = 394DF7652A53CF830064424B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		394DF7522A53CF830064424B /* LaunchScreen.storyboard */ = {
@@ -490,7 +412,7 @@
 				INFOPLIST_FILE = "WorkOut-Time-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CustomTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -518,7 +440,7 @@
 				INFOPLIST_FILE = "WorkOut-Time-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CustomTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,82 +453,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		394DF7722A53CF830064424B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF6B89ULG6;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "minjae.WorkOut-Time-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkOut-Time-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorkOut-Time-iOS";
-			};
-			name = Debug;
-		};
-		394DF7732A53CF830064424B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF6B89ULG6;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "minjae.WorkOut-Time-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkOut-Time-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorkOut-Time-iOS";
-			};
-			name = Release;
-		};
-		394DF7752A53CF830064424B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF6B89ULG6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "minjae.WorkOut-Time-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "WorkOut-Time-iOS";
-			};
-			name = Debug;
-		};
-		394DF7762A53CF830064424B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF6B89ULG6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "minjae.WorkOut-Time-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "WorkOut-Time-iOS";
 			};
 			name = Release;
 		};
@@ -627,24 +473,6 @@
 			buildConfigurations = (
 				394DF76F2A53CF830064424B /* Debug */,
 				394DF7702A53CF830064424B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		394DF7712A53CF830064424B /* Build configuration list for PBXNativeTarget "WorkOut-Time-iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				394DF7722A53CF830064424B /* Debug */,
-				394DF7732A53CF830064424B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		394DF7742A53CF830064424B /* Build configuration list for PBXNativeTarget "WorkOut-Time-iOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				394DF7752A53CF830064424B /* Debug */,
-				394DF7762A53CF830064424B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
