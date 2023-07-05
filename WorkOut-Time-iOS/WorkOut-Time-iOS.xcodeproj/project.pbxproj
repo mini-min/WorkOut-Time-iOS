@@ -27,6 +27,10 @@
 		394DF79B2A53E57C0064424B /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF79A2A53E57C0064424B /* Const.swift */; };
 		394DF79D2A53E58E0064424B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF79C2A53E58E0064424B /* ViewController.swift */; };
 		394DF79F2A53E5980064424B /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF79E2A53E5980064424B /* Storyboard.swift */; };
+		39D9470F2A551C09003C6CA2 /* StopWatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D9470D2A551C09003C6CA2 /* StopWatchTableViewCell.swift */; };
+		39D947102A551C09003C6CA2 /* StopWatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39D9470E2A551C09003C6CA2 /* StopWatchTableViewCell.xib */; };
+		39D947122A551C29003C6CA2 /* Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D947112A551C29003C6CA2 /* Xib.swift */; };
+		39D947152A552447003C6CA2 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D947142A552447003C6CA2 /* StopWatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		394DF79A2A53E57C0064424B /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		394DF79C2A53E58E0064424B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		394DF79E2A53E5980064424B /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		39D9470D2A551C09003C6CA2 /* StopWatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchTableViewCell.swift; sourceTree = "<group>"; };
+		39D9470E2A551C09003C6CA2 /* StopWatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopWatchTableViewCell.xib; sourceTree = "<group>"; };
+		39D947112A551C29003C6CA2 /* Xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xib.swift; sourceTree = "<group>"; };
+		39D947142A552447003C6CA2 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,8 @@
 			children = (
 				394DF7472A53CF810064424B /* AppDelegate.swift */,
 				394DF7492A53CF810064424B /* SceneDelegate.swift */,
+				39D947132A552433003C6CA2 /* Classes */,
+				39D9470C2A551BE1003C6CA2 /* Cells */,
 				394DF7852A53D45E0064424B /* ViewControllers */,
 				394DF7832A53D3DA0064424B /* Views */,
 			);
@@ -177,8 +187,26 @@
 				394DF79A2A53E57C0064424B /* Const.swift */,
 				394DF79C2A53E58E0064424B /* ViewController.swift */,
 				394DF79E2A53E5980064424B /* Storyboard.swift */,
+				39D947112A551C29003C6CA2 /* Xib.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		39D9470C2A551BE1003C6CA2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				39D9470D2A551C09003C6CA2 /* StopWatchTableViewCell.swift */,
+				39D9470E2A551C09003C6CA2 /* StopWatchTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		39D947132A552433003C6CA2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				39D947142A552447003C6CA2 /* StopWatch.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +272,7 @@
 				394DF7542A53CF830064424B /* LaunchScreen.storyboard in Resources */,
 				394DF7922A53D8AE0064424B /* Tabata.storyboard in Resources */,
 				394DF7882A53D55A0064424B /* CustomTabBar.storyboard in Resources */,
+				39D947102A551C09003C6CA2 /* StopWatchTableViewCell.xib in Resources */,
 				394DF7512A53CF830064424B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D947152A552447003C6CA2 /* StopWatch.swift in Sources */,
 				394DF7962A53DCF40064424B /* TimerViewController.swift in Sources */,
 				394DF7802A53D3910064424B /* UIView+Extension.swift in Sources */,
 				394DF77B2A53D3050064424B /* CustomTabBar.swift in Sources */,
@@ -262,9 +292,11 @@
 				394DF7982A53DCFC0064424B /* TabataViewController.swift in Sources */,
 				394DF79B2A53E57C0064424B /* Const.swift in Sources */,
 				394DF78C2A53D6060064424B /* CGPoint+Distance.swift in Sources */,
+				39D947122A551C29003C6CA2 /* Xib.swift in Sources */,
 				394DF7942A53DCEA0064424B /* StopWatchViewController.swift in Sources */,
 				394DF79D2A53E58E0064424B /* ViewController.swift in Sources */,
 				394DF7792A53D2F60064424B /* CustomTabBarButton.swift in Sources */,
+				39D9470F2A551C09003C6CA2 /* StopWatchTableViewCell.swift in Sources */,
 				394DF79F2A53E5980064424B /* Storyboard.swift in Sources */,
 				394DF78A2A53D5850064424B /* CustomTabBarController.swift in Sources */,
 				394DF74A2A53CF810064424B /* SceneDelegate.swift in Sources */,

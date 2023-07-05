@@ -9,21 +9,137 @@ import UIKit
 
 class StopWatchViewController: UIViewController {
     
-    // MARK: - @IBOutlet
-    @IBOutlet weak var timeLabel: UILabel!
+    // MARK: - Properties
+    private let mainStopwatch: Stopwatch = Stopwatch()
+    private let lapStopwatch: Stopwatch = Stopwatch()
+    private var isPlay: Bool = false
+    private var lapTableviewData: [String] = []
     
-    // MARK: - Life Cycle
+    // MARK: - @IBOutlet Properties
+    @IBOutlet weak var stopWatchTableView: UITableView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var lapResetButton: UIButton!
+    @IBOutlet weak var startPauseButton: UIButton!
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        lapResetButton.isEnabled = false
+        
+        stopWatchTableView.register(StopWatchTableViewCell.nib(), forCellReuseIdentifier: Const.Xib.stopWatchTableViewCell)
+        
+        stopWatchTableView.delegate = self
+        stopWatchTableView.dataSource = self
     }
     
-    // MARK: - @IBAction
+    // MARK: - @IBAction Properties
     @IBAction func lapResetTime(_ sender: Any) {
+        
+        // 시간이 멈추어져 있을 때 (버튼은 Reset으로 클릭 가능하도록 표출) -> 상황은 Reset을 눌렀을 때의 코드임
+        if !isPlay {
+            resetMainTimer()
+            changeButton(lapResetButton, title: "Lap", titleColor: UIColor.lightGray)
+            lapResetButton.isEnabled = false
+        }
+        
+        // 시간이 가고 있을 때 (버튼은 Lap으로 클릭 가능하도록 표출) -> 상황은 Lap을 눌렀을 때의 코드임
+        else {
+            if let timerLabelText = timeLabel.text {
+                lapTableviewData.append(timerLabelText)
+            }
+            stopWatchTableView.reloadData()
+        }
     }
     
     @IBAction func startPauseTime(_ sender: Any) {
+        lapResetButton.isEnabled = true
+        changeButton(lapResetButton, title: "Lap", titleColor: UIColor.black)
+        
+        // 시간이 멈추어져 있을 때 (버튼은 Start로 표출) -> 상황은 Start를 눌렀을 때의 코드임
+        if !isPlay {
+            unowned let weakSelf = self
+            mainStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
+            
+            RunLoop.current.add(mainStopwatch.timer, forMode: RunLoop.Mode.common)
+            
+            isPlay = true
+            changeButton(startPauseButton, title: "Stop", titleColor: UIColor.red)
+        }
+        
+        // 시간이 가고 있을 때 (버튼은 Stop으로 표출) -> 상황은 Stop을 눌렀을 때의 코드임
+        else {
+            mainStopwatch.timer.invalidate()
+            lapStopwatch.timer.invalidate()
+            
+            isPlay = false
+            changeButton(startPauseButton, title: "Start", titleColor: UIColor.green)
+            changeButton(lapResetButton, title: "Reset", titleColor: UIColor.black)
+        }
+    }
+}
+
+// MARK: - Action Functions
+extension StopWatchViewController {
+    func changeButton(_ button: UIButton, title: String, titleColor: UIColor) {
+        button.setTitle(title, for: UIControl.State())
+        button.setTitleColor(titleColor, for: UIControl.State())
     }
     
+    func resetTimer(_ stopwatch: Stopwatch, label: UILabel) {
+        stopwatch.timer.invalidate()
+        stopwatch.counter = 0.0
+        label.text = "00:00:00"
+    }
+    
+    func resetMainTimer() {
+        resetTimer(mainStopwatch, label: timeLabel)
+        lapTableviewData.removeAll()
+        stopWatchTableView.reloadData()
+    }
+    
+    @objc func updateMainTimer() {
+        updateTimer(mainStopwatch, label: timeLabel)
+    }
+    
+    
+    func updateTimer(_ stopwatch: Stopwatch, label: UILabel) {
+        stopwatch.counter = stopwatch.counter + 0.035
+        
+        var minutes: String = "\((Int)(stopwatch.counter / 60))"
+        if (Int)(stopwatch.counter / 60) < 10 {
+            minutes = "0\((Int)(stopwatch.counter / 60))"
+        }
+        
+        var seconds: String = String(format: "%.2f", (stopwatch.counter.truncatingRemainder(dividingBy: 60)))
+        if stopwatch.counter.truncatingRemainder(dividingBy: 60) < 10 {
+            seconds = "0" + seconds
+        }
+        
+        label.text = minutes + ":" + seconds
+    }
+}
+
+// MARK: - TableView Delegate
+extension StopWatchViewController: UITableViewDelegate {
+    
+}
+
+// MARK: - TableView DataSource
+extension StopWatchViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lapTableviewData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let timeCell = tableView.dequeueReusableCell(withIdentifier: Const.Xib.stopWatchTableViewCell, for: indexPath) as? StopWatchTableViewCell else { return UITableViewCell() }
+        
+        return timeCell
+    }
+}
+
+// MARK: - Extension
+fileprivate extension Selector {
+    static let updateMainTimer = #selector(StopWatchViewController.updateMainTimer)
 }

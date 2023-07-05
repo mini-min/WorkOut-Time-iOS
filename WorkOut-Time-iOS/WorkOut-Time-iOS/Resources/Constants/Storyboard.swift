@@ -11,10 +11,10 @@ extension Const {
     struct Storyboard {
         
         struct Name {
-            static let CustomTabBar = "CustomTabBar"
-            static let StopWatch = "StopWatch"
-            static let Timer = "Timer"
-            static let Tabata = "Tabata"
+            static let customTabBar = "CustomTabBar"
+            static let stopWatch = "StopWatch"
+            static let timer = "Timer"
+            static let tabata = "Tabata"
         }
     }
 }

@@ -11,10 +11,10 @@ extension Const {
     struct ViewController {
         
         struct Indentifier {
-            static let CustomTabBarController = "CustomTabBarController"
-            static let StopWatchViewController = "StopWatchViewController"
-            static let TimerViewController = "TimerViewController"
-            static let TabataViewController = "TabataViewController"
+            static let customTabBarController = "CustomTabBarController"
+            static let stopWatchViewController = "StopWatchViewController"
+            static let timerViewController = "TimerViewController"
+            static let tabataViewController = "TabataViewController"
         }
     }
 }
