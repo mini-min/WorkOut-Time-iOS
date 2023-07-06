@@ -14,10 +14,12 @@ class StopWatchViewController: UIViewController {
     private let lapStopwatch: Stopwatch = Stopwatch()
     private var isPlay: Bool = false
     private var lapTableviewData: [String] = []
+    private var diffTableViewData: [String] = []
     
     // MARK: - @IBOutlet Properties
     @IBOutlet weak var stopWatchTableView: UITableView!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var lapTimeLabel: UILabel!
     @IBOutlet weak var lapResetButton: UIButton!
     @IBOutlet weak var startPauseButton: UIButton!
     
@@ -39,6 +41,7 @@ class StopWatchViewController: UIViewController {
         // 시간이 멈추어져 있을 때 (버튼은 Reset으로 클릭 가능하도록 표출) -> 상황은 Reset을 눌렀을 때의 코드임
         if !isPlay {
             resetMainTimer()
+            resetLapTimer()
             changeButton(lapResetButton, title: "Lap", titleColor: UIColor.lightGray)
             lapResetButton.isEnabled = false
         }
@@ -48,7 +51,15 @@ class StopWatchViewController: UIViewController {
             if let timerLabelText = timeLabel.text {
                 lapTableviewData.append(timerLabelText)
             }
+            if let diffLabelText = lapTimeLabel.text {
+                diffTableViewData.append(diffLabelText)
+            }
+            
             stopWatchTableView.reloadData()
+            resetLapTimer()
+            unowned let weakSelf = self
+            lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
+            RunLoop.current.add(lapStopwatch.timer, forMode: RunLoop.Mode.common)
         }
     }
     
@@ -59,9 +70,12 @@ class StopWatchViewController: UIViewController {
         // 시간이 멈추어져 있을 때 (버튼은 Start로 표출) -> 상황은 Start를 눌렀을 때의 코드임
         if !isPlay {
             unowned let weakSelf = self
+            
             mainStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
+            lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
             
             RunLoop.current.add(mainStopwatch.timer, forMode: RunLoop.Mode.common)
+            RunLoop.current.add(lapStopwatch.timer, forMode: RunLoop.Mode.common)
             
             isPlay = true
             changeButton(startPauseButton, title: "Stop", titleColor: UIColor.red)
@@ -71,7 +85,6 @@ class StopWatchViewController: UIViewController {
         else {
             mainStopwatch.timer.invalidate()
             lapStopwatch.timer.invalidate()
-            
             isPlay = false
             changeButton(startPauseButton, title: "Start", titleColor: UIColor.green)
             changeButton(lapResetButton, title: "Reset", titleColor: UIColor.black)
@@ -98,10 +111,17 @@ extension StopWatchViewController {
         stopWatchTableView.reloadData()
     }
     
+    func resetLapTimer() {
+        resetTimer(lapStopwatch, label: lapTimeLabel)
+    }
+    
     @objc func updateMainTimer() {
         updateTimer(mainStopwatch, label: timeLabel)
     }
     
+    @objc func updateLapTimer() {
+        updateTimer(lapStopwatch, label: lapTimeLabel)
+    }
     
     func updateTimer(_ stopwatch: Stopwatch, label: UILabel) {
         stopwatch.counter = stopwatch.counter + 0.035
@@ -135,6 +155,23 @@ extension StopWatchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let timeCell = tableView.dequeueReusableCell(withIdentifier: Const.Xib.stopWatchTableViewCell, for: indexPath) as? StopWatchTableViewCell else { return UITableViewCell() }
         
+        let lap = lapTableviewData.count - (indexPath as NSIndexPath).row
+        
+        // Lap 순위
+        if let lapLabel = timeCell.lapLabel {
+            lapLabel.text = "Lap \(lap)"
+        }
+        
+        // 실제 기록
+        if let recordLabel = timeCell.recordLabel {
+            recordLabel.text = "\(lapTableviewData[lap-1])"
+        }
+        
+        // 앞선 기록과의 차이
+        if let diffLabel = timeCell.diffLabel {
+            diffLabel.text = "\(diffTableViewData[lap-1])"
+        }
+        
         return timeCell
     }
 }
@@ -142,4 +179,5 @@ extension StopWatchViewController: UITableViewDataSource {
 // MARK: - Extension
 fileprivate extension Selector {
     static let updateMainTimer = #selector(StopWatchViewController.updateMainTimer)
+    static let updateLapTimer = #selector(StopWatchViewController.updateLapTimer)
 }
