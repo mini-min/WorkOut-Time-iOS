@@ -142,7 +142,15 @@ extension StopWatchViewController {
 
 // MARK: - TableView Delegate
 extension StopWatchViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var copyBoard: [String] = []
+        
+        for indexNum in 0...lapTableviewData.count-1 {
+            copyBoard.append("\(indexNum+1)   \(lapTableviewData[indexNum])   \(diffTableViewData[indexNum])")
+        }
+        
+        UIPasteboard.general.strings = copyBoard
+    }
 }
 
 // MARK: - TableView DataSource
