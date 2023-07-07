@@ -33,6 +33,8 @@ class StopWatchViewController: UIViewController {
         
         stopWatchTableView.delegate = self
         stopWatchTableView.dataSource = self
+        
+        
     }
     
     // MARK: - @IBAction Properties
@@ -134,18 +136,17 @@ extension StopWatchViewController {
         
         label.text = minutes + ":" + seconds
     }
+    
 }
 
 // MARK: - TableView Delegate
 extension StopWatchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var copyBoard: [String] = []
+        let copyMenuInteraction = UIEditMenuInteraction(delegate: self)
+        tableView.addInteraction(copyMenuInteraction)
         
-        for indexNum in 0...lapTableviewData.count-1 {
-            copyBoard.append("\(indexNum+1)   \(lapTableviewData[indexNum])   \(diffTableViewData[indexNum])")
-        }
-        
-        UIPasteboard.general.strings = copyBoard
+        let configuration = UIEditMenuConfiguration(identifier: nil, sourcePoint: tableView.accessibilityActivationPoint)
+        copyMenuInteraction.presentEditMenu(with: configuration)
     }
 }
 
@@ -180,7 +181,23 @@ extension StopWatchViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - Extension
+// MARK: - UIEditMenuInteraction Delegate
+extension StopWatchViewController: UIEditMenuInteractionDelegate {
+    func editMenuInteraction(_ interaction: UIEditMenuInteraction, menuFor configuration: UIEditMenuConfiguration, suggestedActions: [UIMenuElement]) -> UIMenu? {
+        let copyAction = UIAction(title: "기록 복사하기") {_ in
+            var copyBoard: [String] = []
+            
+            for indexNum in 0...self.lapTableviewData.count-1 {
+                copyBoard.append("\(indexNum+1)   \(self.lapTableviewData[indexNum])   \(self.diffTableViewData[indexNum])")
+            }
+            
+            UIPasteboard.general.strings = copyBoard
+        }
+        return UIMenu(children: [copyAction])
+    }
+}
+
+// MARK: - Selector Extension
 fileprivate extension Selector {
     static let updateMainTimer = #selector(StopWatchViewController.updateMainTimer)
     static let updateLapTimer = #selector(StopWatchViewController.updateLapTimer)
