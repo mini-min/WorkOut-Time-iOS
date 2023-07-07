@@ -94,10 +94,6 @@ class StopWatchViewController: UIViewController {
 
 // MARK: - Action Functions
 extension StopWatchViewController {
-    func changeButton(_ button: UIButton, title: String, titleColor: UIColor) {
-        button.setTitle(title, for: UIControl.State())
-        button.setTitleColor(titleColor, for: UIControl.State())
-    }
     
     func resetTimer(_ stopwatch: Stopwatch, label: UILabel) {
         stopwatch.timer.invalidate()
