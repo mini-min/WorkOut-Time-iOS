@@ -136,7 +136,6 @@ extension StopWatchViewController {
         
         label.text = minutes + ":" + seconds
     }
-    
 }
 
 // MARK: - TableView Delegate
@@ -176,7 +175,6 @@ extension StopWatchViewController: UITableViewDataSource {
         if let diffLabel = timeCell.diffLabel {
             diffLabel.text = "\(diffTableViewData[lap-1])"
         }
-        
         return timeCell
     }
 }
@@ -190,7 +188,6 @@ extension StopWatchViewController: UIEditMenuInteractionDelegate {
             for indexNum in 0...self.lapTableviewData.count-1 {
                 copyBoard.append("\(indexNum+1)   \(self.lapTableviewData[indexNum])   \(self.diffTableViewData[indexNum])")
             }
-            
             UIPasteboard.general.strings = copyBoard
         }
         return UIMenu(children: [copyAction])

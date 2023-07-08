@@ -12,12 +12,7 @@
 		394DF74A2A53CF810064424B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF7492A53CF810064424B /* SceneDelegate.swift */; };
 		394DF7512A53CF830064424B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 394DF7502A53CF830064424B /* Assets.xcassets */; };
 		394DF7542A53CF830064424B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394DF7522A53CF830064424B /* LaunchScreen.storyboard */; };
-		394DF7792A53D2F60064424B /* CustomTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF7782A53D2F60064424B /* CustomTabBarButton.swift */; };
-		394DF77B2A53D3050064424B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF77A2A53D3050064424B /* CustomTabBar.swift */; };
-		394DF77D2A53D3160064424B /* CustomTabIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF77C2A53D3160064424B /* CustomTabIndicatorView.swift */; };
 		394DF7802A53D3910064424B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF77F2A53D3910064424B /* UIView+Extension.swift */; };
-		394DF7882A53D55A0064424B /* CustomTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394DF7872A53D55A0064424B /* CustomTabBar.storyboard */; };
-		394DF78A2A53D5850064424B /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF7892A53D5850064424B /* CustomTabBarController.swift */; };
 		394DF78C2A53D6060064424B /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF78B2A53D6060064424B /* CGPoint+Distance.swift */; };
 		394DF78E2A53D8940064424B /* StopWatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394DF78D2A53D8940064424B /* StopWatch.storyboard */; };
 		394DF7942A53DCEA0064424B /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF7932A53DCEA0064424B /* StopWatchViewController.swift */; };
@@ -25,8 +20,8 @@
 		394DF79B2A53E57C0064424B /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF79A2A53E57C0064424B /* Const.swift */; };
 		394DF79D2A53E58E0064424B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF79C2A53E58E0064424B /* ViewController.swift */; };
 		394DF79F2A53E5980064424B /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394DF79E2A53E5980064424B /* Storyboard.swift */; };
+		39737A5F2A5916D4006B23AD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39737A5E2A5916D4006B23AD /* TimerView.swift */; };
 		399DB7472A57B824002F5D16 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 399DB7462A57B824002F5D16 /* Timer.storyboard */; };
-		399DB7492A57B8EC002F5D16 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399DB7482A57B8EC002F5D16 /* TimerView.swift */; };
 		399DB74B2A57BA28002F5D16 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399DB74A2A57BA28002F5D16 /* Int+Extension.swift */; };
 		39D9470F2A551C09003C6CA2 /* StopWatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D9470D2A551C09003C6CA2 /* StopWatchTableViewCell.swift */; };
 		39D947102A551C09003C6CA2 /* StopWatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39D9470E2A551C09003C6CA2 /* StopWatchTableViewCell.xib */; };
@@ -42,12 +37,7 @@
 		394DF7502A53CF830064424B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		394DF7532A53CF830064424B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		394DF7552A53CF830064424B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		394DF7782A53D2F60064424B /* CustomTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarButton.swift; sourceTree = "<group>"; };
-		394DF77A2A53D3050064424B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
-		394DF77C2A53D3160064424B /* CustomTabIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabIndicatorView.swift; sourceTree = "<group>"; };
 		394DF77F2A53D3910064424B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		394DF7872A53D55A0064424B /* CustomTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabBar.storyboard; sourceTree = "<group>"; };
-		394DF7892A53D5850064424B /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		394DF78B2A53D6060064424B /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		394DF78D2A53D8940064424B /* StopWatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StopWatch.storyboard; sourceTree = "<group>"; };
 		394DF7932A53DCEA0064424B /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
@@ -55,8 +45,8 @@
 		394DF79A2A53E57C0064424B /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		394DF79C2A53E58E0064424B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		394DF79E2A53E5980064424B /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		39737A5E2A5916D4006B23AD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		399DB7462A57B824002F5D16 /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
-		399DB7482A57B8EC002F5D16 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		399DB74A2A57BA28002F5D16 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		39D9470D2A551C09003C6CA2 /* StopWatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchTableViewCell.swift; sourceTree = "<group>"; };
 		39D9470E2A551C09003C6CA2 /* StopWatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopWatchTableViewCell.xib; sourceTree = "<group>"; };
@@ -101,16 +91,6 @@
 			path = "WorkOut-Time-iOS";
 			sourceTree = "<group>";
 		};
-		394DF7772A53D2E30064424B /* CustomTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				394DF7782A53D2F60064424B /* CustomTabBarButton.swift */,
-				394DF77A2A53D3050064424B /* CustomTabBar.swift */,
-				394DF77C2A53D3160064424B /* CustomTabIndicatorView.swift */,
-			);
-			path = CustomTabBar;
-			sourceTree = "<group>";
-		};
 		394DF77E2A53D3710064424B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,8 +129,7 @@
 		394DF7832A53D3DA0064424B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				399DB7482A57B8EC002F5D16 /* TimerView.swift */,
-				394DF7772A53D2E30064424B /* CustomTabBar */,
+				39737A5E2A5916D4006B23AD /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				394DF7522A53CF830064424B /* LaunchScreen.storyboard */,
-				394DF7872A53D55A0064424B /* CustomTabBar.storyboard */,
 				394DF78D2A53D8940064424B /* StopWatch.storyboard */,
 				399DB7462A57B824002F5D16 /* Timer.storyboard */,
 			);
@@ -169,7 +147,6 @@
 		394DF7852A53D45E0064424B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				394DF7892A53D5850064424B /* CustomTabBarController.swift */,
 				394DF7932A53DCEA0064424B /* StopWatchViewController.swift */,
 				394DF7952A53DCF40064424B /* TimerViewController.swift */,
 			);
@@ -272,7 +249,6 @@
 			files = (
 				394DF78E2A53D8940064424B /* StopWatch.storyboard in Resources */,
 				394DF7542A53CF830064424B /* LaunchScreen.storyboard in Resources */,
-				394DF7882A53D55A0064424B /* CustomTabBar.storyboard in Resources */,
 				39D947102A551C09003C6CA2 /* StopWatchTableViewCell.xib in Resources */,
 				399DB7472A57B824002F5D16 /* Timer.storyboard in Resources */,
 				394DF7512A53CF830064424B /* Assets.xcassets in Resources */,
@@ -286,25 +262,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39737A5F2A5916D4006B23AD /* TimerView.swift in Sources */,
 				39D947152A552447003C6CA2 /* StopWatch.swift in Sources */,
 				394DF7962A53DCF40064424B /* TimerViewController.swift in Sources */,
 				394DF7802A53D3910064424B /* UIView+Extension.swift in Sources */,
 				399DB74B2A57BA28002F5D16 /* Int+Extension.swift in Sources */,
-				394DF77B2A53D3050064424B /* CustomTabBar.swift in Sources */,
 				394DF7482A53CF810064424B /* AppDelegate.swift in Sources */,
 				394DF79B2A53E57C0064424B /* Const.swift in Sources */,
 				394DF78C2A53D6060064424B /* CGPoint+Distance.swift in Sources */,
 				391A74302A57CA1D00572B0F /* UIViewController+Extension.swift in Sources */,
-				399DB7492A57B8EC002F5D16 /* TimerView.swift in Sources */,
 				39D947122A551C29003C6CA2 /* Xib.swift in Sources */,
 				394DF7942A53DCEA0064424B /* StopWatchViewController.swift in Sources */,
 				394DF79D2A53E58E0064424B /* ViewController.swift in Sources */,
-				394DF7792A53D2F60064424B /* CustomTabBarButton.swift in Sources */,
 				39D9470F2A551C09003C6CA2 /* StopWatchTableViewCell.swift in Sources */,
 				394DF79F2A53E5980064424B /* Storyboard.swift in Sources */,
-				394DF78A2A53D5850064424B /* CustomTabBarController.swift in Sources */,
 				394DF74A2A53CF810064424B /* SceneDelegate.swift in Sources */,
-				394DF77D2A53D3160064424B /* CustomTabIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +420,7 @@
 				INFOPLIST_FILE = "WorkOut-Time-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = CustomTabBar;
+				INFOPLIST_KEY_UIMainStoryboardFile = StopWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,7 +448,7 @@
 				INFOPLIST_FILE = "WorkOut-Time-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = CustomTabBar;
+				INFOPLIST_KEY_UIMainStoryboardFile = StopWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

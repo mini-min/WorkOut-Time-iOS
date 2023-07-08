@@ -11,7 +11,7 @@
         <!--Timer View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TimerViewController" customModule="WorkOut_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimerViewController" id="Y6W-OH-hqX" customClass="TimerViewController" customModule="WorkOut_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                                     <action selector="startPauseTimerAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="I5Q-Pa-CQW"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02D-Mh-EfE" customClass="TimerView" customModule="WorkOut_Time_iOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="TimerView" translatesAutoresizingMaskIntoConstraints="NO" id="02D-Mh-EfE" customClass="TimerView" customModule="WorkOut_Time_iOS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="77" width="361" height="364"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>

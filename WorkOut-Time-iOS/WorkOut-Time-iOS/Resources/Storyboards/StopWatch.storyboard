@@ -11,7 +11,7 @@
         <!--Stop Watch View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="StopWatchViewController" customModule="WorkOut_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StopWatchViewController" id="Y6W-OH-hqX" customClass="StopWatchViewController" customModule="WorkOut_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,12 +60,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nHw-Gn-Z7x" secondAttribute="trailing" id="c98-9z-J6u"/>
                             <constraint firstItem="nHw-Gn-Z7x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="eui-jF-Eb2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nHw-Gn-Z7x" secondAttribute="bottom" id="txp-tK-9o3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hDt-hu-1fi"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lapResetButton" destination="kGa-sK-G5K" id="b8y-8Y-qfJ"/>
@@ -77,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="991.60305343511448" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
