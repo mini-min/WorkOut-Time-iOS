@@ -60,7 +60,7 @@ class StopWatchViewController: UIViewController {
             stopWatchTableView.reloadData()
             resetLapTimer()
             unowned let weakSelf = self
-            lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
+            lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.01, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
             RunLoop.current.add(lapStopwatch.timer, forMode: RunLoop.Mode.common)
         }
     }
@@ -73,8 +73,8 @@ class StopWatchViewController: UIViewController {
         if !isPlay {
             unowned let weakSelf = self
             
-            mainStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
-            lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
+            mainStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.01, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
+            lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.01, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
             
             RunLoop.current.add(mainStopwatch.timer, forMode: RunLoop.Mode.common)
             RunLoop.current.add(lapStopwatch.timer, forMode: RunLoop.Mode.common)
@@ -122,7 +122,7 @@ extension StopWatchViewController {
     }
     
     func updateTimer(_ stopwatch: Stopwatch, label: UILabel) {
-        stopwatch.counter = stopwatch.counter + 0.035
+        stopwatch.counter = stopwatch.counter + 0.01
         
         var minutes: String = "\((Int)(stopwatch.counter / 60))"
         if (Int)(stopwatch.counter / 60) < 10 {
