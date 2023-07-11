@@ -15,6 +15,7 @@ class StopWatchViewController: UIViewController {
     private var isPlay: Bool = false
     private var lapTableviewData: [String] = []
     private var diffTableViewData: [String] = []
+    var initialTouchPoint = CGPoint(x: 0, y: 0)
     
     // MARK: - @IBOutlet Properties
     @IBOutlet weak var stopWatchTableView: UITableView!
