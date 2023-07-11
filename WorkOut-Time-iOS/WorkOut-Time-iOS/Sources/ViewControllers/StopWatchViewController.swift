@@ -35,7 +35,6 @@ class StopWatchViewController: UIViewController {
         stopWatchTableView.delegate = self
         stopWatchTableView.dataSource = self
         
-        
     }
     
     // MARK: - @IBAction Properties
@@ -45,8 +44,8 @@ class StopWatchViewController: UIViewController {
         if !isPlay {
             resetMainTimer()
             resetLapTimer()
-            changeButton(lapResetButton, title: "Lap", titleColor: UIColor.lightGray)
             lapResetButton.isEnabled = false
+            startPauseButton.setImage(UIImage(named: "StartButton"), for: .normal)
         }
         
         // 시간이 가고 있을 때 (버튼은 Lap으로 클릭 가능하도록 표출) -> 상황은 Lap을 눌렀을 때의 코드임
@@ -68,7 +67,7 @@ class StopWatchViewController: UIViewController {
     
     @IBAction func startPauseTime(_ sender: Any) {
         lapResetButton.isEnabled = true
-        changeButton(lapResetButton, title: "Lap", titleColor: UIColor.black)
+        lapResetButton.setImage(UIImage(named: "LapButtonAct"), for: .normal)
         
         // 시간이 멈추어져 있을 때 (버튼은 Start로 표출) -> 상황은 Start를 눌렀을 때의 코드임
         if !isPlay {
@@ -81,7 +80,7 @@ class StopWatchViewController: UIViewController {
             RunLoop.current.add(lapStopwatch.timer, forMode: RunLoop.Mode.common)
             
             isPlay = true
-            changeButton(startPauseButton, title: "Stop", titleColor: UIColor.red)
+            startPauseButton.setImage(UIImage(named: "StopButton"), for: .normal)
         }
         
         // 시간이 가고 있을 때 (버튼은 Stop으로 표출) -> 상황은 Stop을 눌렀을 때의 코드임
@@ -89,8 +88,8 @@ class StopWatchViewController: UIViewController {
             mainStopwatch.timer.invalidate()
             lapStopwatch.timer.invalidate()
             isPlay = false
-            changeButton(startPauseButton, title: "Start", titleColor: UIColor.green)
-            changeButton(lapResetButton, title: "Reset", titleColor: UIColor.black)
+            lapResetButton.setImage(UIImage(named: "ResetButton"), for: .normal)
+            startPauseButton.setImage(UIImage(named: "StartButton"), for: .normal)
         }
     }
 }
@@ -183,11 +182,11 @@ extension StopWatchViewController: UITableViewDataSource {
 // MARK: - UIEditMenuInteraction Delegate
 extension StopWatchViewController: UIEditMenuInteractionDelegate {
     func editMenuInteraction(_ interaction: UIEditMenuInteraction, menuFor configuration: UIEditMenuConfiguration, suggestedActions: [UIMenuElement]) -> UIMenu? {
-        let copyAction = UIAction(title: "기록 복사하기") {_ in
+        let copyAction = UIAction(title: "랩타임 기록 전체 복사하기") {_ in
             var copyBoard: [String] = []
             
             for indexNum in 0...self.lapTableviewData.count-1 {
-                copyBoard.append("\(indexNum+1)   \(self.lapTableviewData[indexNum])   \(self.diffTableViewData[indexNum])")
+                copyBoard.append("\(indexNum+1)     \(self.lapTableviewData[indexNum])     \(self.diffTableViewData[indexNum])\n")
             }
             UIPasteboard.general.strings = copyBoard
         }
